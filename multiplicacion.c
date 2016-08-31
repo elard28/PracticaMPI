@@ -35,13 +35,13 @@ int main(int argc, char const *argv[])
     int	my_rank;
 
     MPI_Init(NULL, NULL);
-    MPI_Comm_TAM(MPI_COMM_WORLD, &comm_sz);
+    MPI_Comm_size(MPI_COMM_WORLD, &comm_sz);
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
 
     if(my_rank==0)
     {
-        fill(A);
-        fill(B);
+        llenar(A);
+        llenar(B);
         print(A);
         print(B);
     }
